@@ -2,10 +2,16 @@
 using namespace std;
 int main()
 {
-long long a,b,c,d,e,f,Min,Nim;
-cin <<a <<b <<c <<d <<e <<f;
-Min=min(min(a,b),c);
-Nim=min(min(d,e),f);
-cout<<Nim<<Min;
+int a,b,c,a2,b2,c2;
+cin >>a >>b >>c >>a2 >>b2 >>c2;
+if(a>b)swap(a,b);
+if(b>c)swap(b,c);
+if(a>b)swap(a,b);
+if(a2>b2)swap(a2,b2);
+if(b2>c2)swap(c2,b2);
+if(a2>b2)swap(a2,b2);
+if(a>a2&&b>b2&&c>c2)cout<<"Yes. 2 in 1";
+else{if(a2>a&&b2>b&&c2>c)cout<<"Yes. 1 in 2";
+else{cout<<"No";}}
 return 0;
 }
